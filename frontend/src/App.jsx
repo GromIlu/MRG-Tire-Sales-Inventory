@@ -7,6 +7,7 @@ import Messages from "./pages/Messages";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import DashboardLayout from "./layouts/DashboardLayout";
+import Register from "./pages/Register";
 
 
 export default function App() {
@@ -20,7 +21,8 @@ export default function App() {
       <Routes>
         {/* Login Page */}
         <Route path="/login" element={<Login />} />
-
+        <Route path="/register" element={<Register />} />
+        
         {/* Dashboard Pages */}
         <Route
           path="/"
