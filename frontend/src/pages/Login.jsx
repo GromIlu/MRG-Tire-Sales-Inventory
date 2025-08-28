@@ -39,7 +39,7 @@ export default function Login() {
     }
 
     // If approved
-    navigate("/");
+    navigate("/dashboard");
     setIsLoading(false);
   };
 
@@ -51,7 +51,7 @@ export default function Login() {
       <div className="relative w-full max-w-md">
         {/* Logo/Brand Section */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl mb-4 shadow-lg">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-500 to-red-600 rounded-2xl mb-4 shadow-lg">
             <Circle className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-3xl font-bold text-gray mb-2">MRG Tire Center</h1>
@@ -104,7 +104,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold py-3 rounded-xl hover:from-orange-600 hover:to-red-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-slate-900 transition-all duration-200 transform hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
+              className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-3 rounded-xl hover:from-indigo-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-indigo-800 transition-all duration-200 transform hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
             >
               {isLoading ? (
                 <div className="flex items-center justify-center">
@@ -116,6 +116,17 @@ export default function Login() {
               )}
             </button>
           </div>
+
+        
+<button
+  onClick={() => navigate("/")}
+  className="mt-6 flex items-center justify-center gap-2 w-full bg-gray-50 hover:bg-gray-100 text-gray-600 hover:text-gray-800 py-3 px-4 rounded-xl border border-gray-200 hover:border-gray-300 transition-all duration-200 font-medium"
+>
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+  </svg>
+  Back to Main Page
+</button>
 
           {/* Divider */}
           <div className="relative my-6">
@@ -131,7 +142,7 @@ export default function Login() {
           <div className="text-center">
             <Link
               to="/register"
-              className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium transition-colors duration-200"
+              className="inline-flex items-center text-blue-800 hover:text-teal-600 font-medium transition-colors duration-200"
             >
               Create an account
               <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

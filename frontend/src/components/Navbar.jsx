@@ -83,7 +83,7 @@ export default function Navbar({ user }) {
 
           {/* Logout Button */}
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
-            Logout
+            <a href="/login">Logout</a>
           </button>
 
           {/* Mobile Menu Toggle */}

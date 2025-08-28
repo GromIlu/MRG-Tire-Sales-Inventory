@@ -6,26 +6,33 @@ import Reports from "./pages/Reports";
 import Messages from "./pages/Messages";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
-import DashboardLayout from "./layouts/DashboardLayout";
 import Register from "./pages/Register";
-
+import DashboardLayout from "./layouts/DashboardLayout";
+import MainPage from "./pages/MainPage";   // 👈 import MainPage
+import AdminLogin from "./admin/login/AdminLogin"; // 👈 optional if you separate
+import UserLogin from "./pages/Login";   // 👈 optional if you separate
 
 export default function App() {
-    const currentUser = {
-    name: "Gerome Ilustre",  // <- registered user’s name
+  const currentUser = {
+    name: "Gerome Ilustre",
     role: "Admin",
   };
 
   return (
     <BrowserRouter>
       <Routes>
-        {/* Login Page */}
+        {/* Main Page */}
+        <Route path="/" element={<MainPage />} />
+
+        {/* Login Pages */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        
-        {/* Dashboard Pages */}
+        <Route path="/admin/adminlogin" element={<AdminLogin />} />
+        <Route path="/userlogin" element={<UserLogin />} />
+
+        {/* Dashboard Pages (moved under /dashboard) */}
         <Route
-          path="/"
+          path="/dashboard"
           element={
             <DashboardLayout>
               <Dashboard />

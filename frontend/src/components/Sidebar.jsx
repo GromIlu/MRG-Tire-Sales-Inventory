@@ -3,7 +3,7 @@ import { Home, Package, ShoppingCart, BarChart, MessageCircle, User, Sun, Moon }
 import { useState, useEffect } from "react";
 
 const menuItems = [
-  { name: "Dashboard", path: "/", icon: <Home size={20} /> },
+  { name: "Dashboard", path: "/dashboard", icon: <Home size={20} /> },
   { name: "Products", path: "/products", icon: <Package size={20} /> },
   { name: "Sales", path: "/sales", icon: <ShoppingCart size={20} /> },
   { name: "Reports", path: "/reports", icon: <BarChart size={20} /> },
